@@ -5,18 +5,24 @@ namespace PopcornChef {
     public class Timer : MonoBehaviour {
 
         public float TickTime;
+        public bool ResetOnTick = true;
         public UnityEvent OnTick;
         float leftTime;
 
-        void Start() {
+        public void Start() {
+            Reset();
+        }
+
+        public void Reset() {
             leftTime = TickTime;
         }
 
         void Update() {
-            leftTime -= Time.deltaTime;
-            if (leftTime <= 0f) {
+            if (leftTime == 0f) return;
+            leftTime = Mathf.Max(0f, leftTime - Time.deltaTime);
+            if (leftTime == 0f) {
                 OnTick.Invoke();
-                leftTime = TickTime;
+                if (ResetOnTick) leftTime = TickTime;
             }
         }
 

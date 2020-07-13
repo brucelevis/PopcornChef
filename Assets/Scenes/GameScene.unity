@@ -1885,6 +1885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TickTime: 4
+  ResetOnTick: 1
   OnTick:
     m_PersistentCalls:
       m_Calls:
@@ -2586,3 +2587,26 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 9146647765447504178}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9146647765447504180 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2759045158469727688, guid: ef59ba4dd7dc9074b9f3aaf43876f0c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 9146647765447504178}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9146647765447504181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146647765447504180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a750e426e49ac2140a67222f01ca3ad2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TickTime: 0
+  ResetOnTick: 1
+  OnTick:
+    m_PersistentCalls:
+      m_Calls: []
