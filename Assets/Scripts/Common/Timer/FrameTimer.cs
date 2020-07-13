@@ -9,11 +9,11 @@ namespace PopcornChef {
         public UnityEvent OnTick;
         int leftFrame;
 
-        void Start() {
+        public void Start() {
             Reset();
         }
 
-        void Reset() {
+        public void Reset() {
             leftFrame = TickFrame;
         }
 
