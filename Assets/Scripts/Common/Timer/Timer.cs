@@ -22,7 +22,7 @@ namespace PopcornChef {
             leftTime = Mathf.Max(0f, leftTime - Time.deltaTime);
             if (leftTime == 0f) {
                 OnTick.Invoke();
-                if (ResetOnTick) leftTime = TickTime;
+                if (ResetOnTick) Reset();
             }
         }
 
